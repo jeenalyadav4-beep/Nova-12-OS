@@ -1,22 +1,64 @@
-# Nova 12 OS 🌌
+# Nova 12 OS — Next-Generation Bare-Metal x86-64 Operating System Platform
 
-Nova 12 OS is a fully independent, bare-metal x86-64 long-mode operating system built using pure Python file manipulation automation. Because it implements its own multi-module execution toolchain, it initializes directly on the CPU level, bypassing all standard Windows 10 or Windows 11 system controls.
+Welcome to the official distribution repository for **Nova 12 OS**, an ultra-lightweight, high-performance operating system designed from the ground up for bare-metal x86-64 system architectures. By operating directly on raw CPU registers and initializing its own hardware state tables, Nova 12 OS functions completely independently of existing software layers, bypassing conventional commercial restrictions (such as Trusted Platform Module 2.0, Secure Boot validations, digital signatures, and baseline RAM allocations).
 
-## ⚙️ Core Architecture Features
-- **64-Bit Multi-Stage Paging:** The builder directly configures x86 PAE (Physical Address Extension) page table blocks to shift processing registers out of legacy modes.
-- **Embedded Font Typography:** Features a robust 8x8 font bitmap mapping grid for advanced visual console output layout rendering.
-- **Low-Level Scancode Translators:** Integrates full hardware port scancode translator indexing maps to translate keyboard interrupts into terminal strings.
+This distribution repository serves as the public gateway for testing pre-compiled, optimized production binaries of the Nova 12 environment. 
 
-## 🛠️ Local Construction & Deployment
-To safely build and run Nova 12 OS on your machine without third-party compiler downloads, follow these instructions:
+---
 
-1. Download or clone the **`generate_nova12.py`** script file from this repository.
-2. Open your terminal or Command Prompt and run the master Python compiler:
-   ```bash
-   python generate_nova12.py
-   ```
-3. The engine will instantly assemble the raw byte registers, fill out the padding parameters, and output a deployment file named `nova12_ultimate.img`.
-4. Open **AnyBurn**, select **Create Bootable Image File from Files / Folders**, target your workspace folder containing the image file, set the volume label to `NOVA12OS`, and compile your final `Nova12OS.iso` output tracking file.
-5. Load the output `.iso` file into any system hypervisor or emulator (such as VirtualBox or QEMU) as a primary bootable optical disk drive to experience the independent, velvet-indigo text shell!
+## 💎 Core Architectural Paradigms
 
+Nova 12 OS is built to provide a clean, high-performance workspace by replacing complex commercial operating system layers with a streamlined, low-overhead kernel.
 
+*   **Long-Mode Hardware Handshake:** The system features a custom multi-stage boot sequence that manually sets up 64-bit Global Descriptor Tables (GDT) and switches the CPU directly into x86-64 Long Mode right from startup.
+*   **Multi-Tier Virtual Memory Paging:** Maps out custom hardware page translation structures (PML4, PDPT, and Page Directories) directly inside protected low-memory domains to optimize memory isolation.
+*   **Direct-Paint Video Framebuffers:** Bypasses software display stacks by writing pixel data directly onto the system's linear VESA framebuffer window.
+*   **Low-Level Interrupt I/O Framework:** Includes built-in scancode translator maps that capture raw keyboard controller interrupts, routing inputs into a real-time terminal parsing loop.
+
+---
+
+## 🚀 Key Operational Features
+
+*   **100% Independent Kernel:** Boots natively from raw storage mediums without relying on an underlying Windows, Linux, or DOS subsystem.
+*   **High-Resolution Visual Workspace:** Boots directly into a dark royal indigo-blue system canvas designed for maximum visual clarity.
+*   **Responsive Command Parser Shell:** Includes a built-in terminal environment that catches keystrokes, prints real-time typography responses, and manages internal execution parameters.
+*   **Universal Legacy Support:** Completely removes hardware enforcement rules, enabling smooth installation and execution on legacy architectures, unverified hardware, and modern machines alike.
+
+---
+
+## 💾 Deployment & Installation Guide
+
+Nova 12 OS is distributed as a completely pre-compiled, production-ready, bootable optical disk image (.ISO). Users do not need to download compiler sets, configure scripts, or build system files manually. 
+
+To download and run the software inside a safe virtual machine testing environment on your laptop, use the following operational roadmap:
+
+### 1. Retrieve the Pre-Built OS Image
+*   Look at the right-hand sidebar of this repository screen.
+*   Navigate into the official **[Releases](../../releases)** gateway.
+*   Locate the latest stable build marker and download the official binary asset: **`Nova12OS.iso`**.
+
+### 2. Configure Your Virtual Workspace
+*   Launch your preferred virtual machine hypervisor platform (such as **Oracle VM VirtualBox** or **QEMU**).
+*   Click the **New** or **Create Machine** control prompt.
+*   Configure the basic configuration wizard parameters:
+    *   **Name:** `Nova 12 OS`
+    *   **Operating System Type:** Select `Other`
+    *   **Architecture Version:** Select `Other/Unknown (64-bit)`
+*   Allocate a minimal system RAM baseline (e.g., 512MB to 1024MB) and confirm the storage drive configurations.
+
+### 3. Mount the Disk and Boot
+*   Open the settings panel for your newly created virtual machine.
+*   Navigate directly down to the **Storage** allocation tab.
+*   Under the controller framework, click the optical disc device option and choose to add a disk file.
+*   Target the pre-compiled **`Nova12OS.iso`** file you downloaded to your Desktop.
+*   Save the settings, highlight the machine name, and click the green **Start** arrow.
+*   The virtual machine will immediately bypass the host platform layers, initialize the virtual hardware, paint the screen canvas, and display the official terminal environment:  
+    `NOVA 12 OPERATING SYSTEM SUITE [PRODUCTION INITIALIZATION COMPLETE]`
+
+---
+
+## 🛡️ Distribution, Licensing, & Terms of Use
+
+All rights reserved. The core compilation scripts, source files, asset maps, and assembly toolchains used to build Nova 12 OS are strictly proprietary and closed-source to protect the platform's unique deployment methods. 
+
+Users are granted a non-exclusive, non-transferable license to download and execute the pre-compiled binary ISO track files solely for personal, educational, research, and non-commercial hobbyist development purposes. Redistribution, reverse engineering, decompilation, or hosting modified variations of the compiled binary tracks without explicit written authorization is strictly prohibited.
